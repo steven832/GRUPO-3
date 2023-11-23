@@ -1,0 +1,54 @@
+.botonxd{
+    background-color: #000000;
+    color: #fffefe;
+    font-size: 20px;
+    text-align: center
+    padding: ;
+    width: 180px;
+    border: 0px; 
+    border-radius: 0px;
+    position: relative;
+    top: -160px; ;
+    bottom: ;
+    right: ;
+    left: 1270px;
+    font-family:consolas;
+}
+.botonxd2{
+    background-color: #000000;
+    color: #fffefe;
+    font-size: 20px;
+    text-align: center
+    padding: ;
+    width: 180px;
+    border: 0px; 
+    border-radius: 0px;
+    position: relative;
+    top: -160px; ;
+    bottom: ;
+    right: ;
+    left: 1261px;
+    font-family:consolas;
+}
+.botoncarrito{
+    background-color: #000000;
+    color: #fffefe;
+    font-size: 20px;
+    text-align: 
+    padding: ;
+    width: 180px;
+    border: 0px; 
+    border-radius: 0px;
+    position: relative;
+    top: -160px; ;
+    bottom: ;
+    right: ;
+    left: 1253px;
+    font-family:consolas;
+    
+}
+
+h1{
+    color: white;
+    font-family:consolas;
+}

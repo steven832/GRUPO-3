@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPTEC</title>
+    <link rel="stylesheet" href="estilosxd.css">
+    <link rel="stylesheet" href="botons.css">
+    <link rel="stylesheet" href="imagenesindex.css">
+    <link rel="stylesheet" href="menu2.css">
+    <script src="https://kit.fontawesome.com/7e6362273f.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* ... (otros estilos) */
+
+        #carrito {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        #carrito h3 {
+            margin-bottom: 10px;
+        }
+
+        #carrito ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #carrito li {
+            margin-bottom: 5px;
+        }
+
+        #carrito button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<div class="logo">
+    <a href="index.html">
+    <img src="imagenes/descarga.png" alt="logo" width="25%">
+    </a>
+    </div>
+
+    <div class="busca">
+    <i class="fa fa-search" aria-hidden="true"></i>
+    <input type="text" name="">
+    </div>
+
+    <a href=""><button type="button" class="botonxd"><i class="fa-solid fa-user"></i>      Mi cuenta   |</button></a>
+    <a href=""><button type="button" class="botonxd2"><i class="fa-solid fa-registered"></i></i></i>  Registrate                                       |</button></a>
+
+    <a href=""><button type="button" class="botoncarrito"><i class="fa-solid fa-cart-shopping"></i>  Mis compras </button></a>
+<br>
+<hr color="fffff">
+    <ul class="nav">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Catálogo Mujer.html">Catálogo</a></li>
+        <li><a href="Nosotros.html">Nosotros</a></li>
+        <li><a href="Contáctanos.html">Contáctanos</a></li>
+      </ul>
+<hr color="fffff">
+</div>
+</div>
+    <div class="container">
+        <div class="card" onclick="agregarAlCarrito('Crop top de lana', 58.20)">
+            <figure>
+                <img src="imagenes/images (3).jpeg">
+            </figure>
+            <div class="contenido">
+                <h2>Crop top de lana</h2>
+                <h2>S/58.20</h2>
+            </div>
+        </div>
+        <div class="card" onclick="agregarAlCarrito('Pantalon Jean para Hombre', 80.00)">
+            <figure>
+                <img src="imagenes/2.jpg">
+            </figure>
+            <div class="contenido">
+                <h2>Pantalon Jean para Hombre</h2>
+                <h2>S/80.00</h2>
+            </div>
+        </div>
+        <div class="card" onclick="agregarAlCarrito('Pantalon Jean oscuro para Hombre', 100.00)">
+            <figure>
+                <img src="imagenes/3.jpg">
+            </figure>
+            <div class="contenido">
+                <h2>Pantalon Jean oscuro para Hombre</h2>
+                <h2>S/100.00</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card" onclick="agregarAlCarrito('Crop top', 58.20)">
+            <figure>
+                <img src="imagenes/Crop-top-8.jpg">
+            </figure>
+            <div class="contenido">
+                <h2>Crop top</h2>
+                <h2>S/58.20</h2>
+            </div>
+        </div>
+        <div class="card" onclick="agregarAlCarrito('Polo Manga corta', 80.00)">
+            <figure>
+                <img src="imagenes/descarga.jpeg">
+            </figure>
+            <div class="contenido">
+                <h2>Polo Manga corta</h2>
+                <h2>S/80.00</h2>
+            </div>
+        </div>
+        <div class="card" onclick="agregarAlCarrito('Polo rosado', 70.00)">
+            <figure>
+                <img src="imagenes/descarga (1).jpeg">
+            </figure>
+            <div class="contenido">
+                <h2>Polo rosado</h2>
+                <h2>S/70.00</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card" onclick="agregarAlCarrito('Crop top celeste', 76.20)">
+            <figure>
+                <img src="imagenes/descarga (2).jpeg">
+            </figure>
+            <div class="contenido">
+                <h2>Crop top celeste</h2>
+                <h2>S/76.20</h2>
+            </div>
+        </div>
+        <div class="card" onclick="agregarAlCarrito('Polo rosa floreado', 80.00)">
+            <figure>
+                <img src="imagenes/be5ffc9deec1ee87f22bc1c801fa1fd4.jpg">
+            </figure>
+            <div class="contenido">
+                <h2>Polo rosa floreado</h2>
+                <h2>S/80.00</h2>
+            </div>
+        </div>
+        <div class="card" onclick="agregarAlCarrito('Crop top de Lana', 100.00)">
+            <figure>
+                <img src="imagenes/images (1).jpeg">
+            </figure>
+            <div class="contenido">
+                <h2>Crop top de Lana</h2>
+                <h2>S/100.00</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Agregamos el carrito de compras -->
+    <div id="carrito">
+        <h3>Carrito de Compras</h3>
+        <ul id="items">
+            <!-- Los elementos del carrito se agregarán dinámicamente aquí -->
+        </ul>
+        <p>Total: <span id="total">0.00</span></p>
+        <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+    </div>
+    <br>
+
+    <table width="60%">
+    
+         <hr color="fffff">
+    
+    <table border="0" width="100%" >
+        <tr>
+        <br>
+            <td>
+                <div align="center">
+                <h1>Ubicación de tienda</h1>
+                <br>
+                </div>
+                <div align="center">
+                    
+                <h3>Av. Fray A. Alcalde 10441, Lima, Comas, Perú</h3></div>
+                     
+                <div align="center">
+                    <a href="Contacto.html">
+                 <br><h3>señaldeestilo@gmail.com</h3></div>
+                    </a>
+                <div align="center">
+                 <br><h3>+51-947786822</h3></div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+              
+              
+              
+            </td>
+            <td width="36%" style=>
+                <div align="center">
+                <h1>Tienda</h1>
+    <br>            
+                </div>
+                <div align="center">
+                    <a href="Catálogo Hombre.html"style="text-decoration:none">
+                   <h3>Hombres</h3></div>
+                    </a>
+                <div align="center">
+                    <a href="Catálogo Mujer.html"style="text-decoration:none">
+                    <br><h3>Mujeres</h3></div>
+                   </a>
+                <div align="center">
+                    <a href="Catálogo Niños.html"style="text-decoration:none">
+                   <br><h3>Niños</h3></div>
+                    </a>
+                <div align="center">
+                    <br><a href="Catálogo Niñas.html"style="text-decoration:none">
+                   <h3>Niñas</h3></div>
+                    </a>
+                <div align="center">
+                    <a href="Catálogo Accesorios.html"style="text-decoration:none">
+                  <br><h3>Accesorios </h3></div>
+                    </a>
+                   
+                    
+                    
+            </td>
+            <td width="32%">
+                <div align="center">
+                <h1>Atención al cliente</h1>
+               
+               
+                <div align="center">
+                    <br><a href="Contacto.html"><h3>Contáctanos</h3></div>
+                    </a>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>  
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+              
+                   
+                   
+            
+            </td>
+        </tr>
+             
+    </table>
+    <br>
+    <hr color="fffff">
+    <h3>© 2022 Creado por Grupo 11</h3>
+
+    <script>
+        var carrito = [];
+        var total = 0;
+
+        function agregarAlCarrito(item, precio) {
+            carrito.push({ item, precio });
+            total += precio;
+            actualizarCarrito();
+        }
+
+        function actualizarCarrito() {
+            var carritoContainer = document.getElementById('items');
+            var totalContainer = document.getElementById('total');
+            carritoContainer.innerHTML = '';
+
+            carrito.forEach(function (item) {
+                var li = document.createElement('li');
+                li.textContent = `${item.item} - S/${item.precio.toFixed(2)}`;
+                carritoContainer.appendChild(li);
+            });
+
+            totalContainer.textContent = total.toFixed(2);
+        }
+
+        function vaciarCarrito() {
+            carrito = [];
+            total = 0;
+            actualizarCarrito();
+        }
+    </script>
+</body>
+</html>
